@@ -4,18 +4,16 @@ import {
 	                 // will use redux thunk 
 	combineReducers  // I plan to use more than one reducer so this combines them into one big store
 } from 'redux';
+import thunk from 'redux-thunk'; // library that works well with closures and async actions within redux-store
+import modals from '../modules/modals/reducer'
 
 
 
+const reducers = combineReducers({
+	modals
+})
 
-
-// const reducers = combineReducers({
-// 	red1,
-// 	red2,
-// 	red3
-// })
-
-const middleware = [thunk] // library that works well with closures and async actions within redux-store
+const middleware = [thunk] 
 
 export default createStore(
   reducers,
