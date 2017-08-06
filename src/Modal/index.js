@@ -5,10 +5,6 @@ import Button from '../Button'
 
 
 export default class Modal extends React.Component {
-
-  componentDidMount() {
-    console.log(this.proptype)
-  }
   
   exit=(event) =>{
     event.preventDefault()
