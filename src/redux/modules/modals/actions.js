@@ -1,7 +1,16 @@
-export const nameModal = () => ({type: 'NAME_MODAL'})
+const actionTypes = ['NAME_MODAL', 'ADDRESS_MODAL', 'TEAMS_MODAL', 'CLOSE_MODAL'] // list of actiontype to validate dispatch argument
 
-export const addressModal = () => ({type: 'ADDRESS_MODAL'})
+const closeModalType = () => ({type: 'CLOSE_MODAL'})
 
-export const teamsModal = () => ({type: 'TEAMS_MODAL'})
 
-export const closeModal = (name) => ({type: 'CLOSE_MODAL'})
+export const closeModal = () =>{
+	return dispatch=>{
+    dispatch(closeModalType())
+	}
+}
+
+export const switchModalType = (type) =>{
+	return dispatch =>{
+		if (actionTypes.includes(type)) {dispatch({type: type})} // ensure that users can't change action from client side
+	}
+}

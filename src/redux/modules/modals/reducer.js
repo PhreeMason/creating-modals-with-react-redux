@@ -1,6 +1,5 @@
 const initialState = {
 	currentModal: null,
-
 }
 
 export default (state = initialState, action) => {
