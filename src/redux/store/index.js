@@ -6,11 +6,11 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk'; // library that works well with closures and async actions within redux-store
 import modals from '../modules/modals/reducer'
-
-
+import settings from '../modules/settings/reducer'
 
 const reducers = combineReducers({
-	modals
+	modals,
+	settings
 })
 
 const middleware = [thunk] 
